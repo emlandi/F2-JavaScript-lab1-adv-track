@@ -58,6 +58,8 @@ assert(1 === 2, 'this is an example of a failing assertion. 1 does not equal 2.'
 */
 
 //your code goes here
+assert("tiger" === "zebra", this is an example of a failing assertion because the sides are different.)
+assert("elephants" > "bees")
 
 /* ========================================================================
 ----------------- Meerkats (20 points total)-------------------------------
@@ -78,11 +80,36 @@ var sentence2 = 'Come over here so you can scratch my belly.';
 // 'chirp' (10 points)
 
 // your code goes here
+//This prints chirp, chirp, chirp to the console but sentence1 is still evaluating to "More food please"
+
+// for (var i=0; i<sentence1.split(" ").length; i++) {
+//   console.log("chirp")
+// }
+
+var array1 = sentence1.split(" ");
+  //array1 = [ 'More', 'food', 'please.' ]
+for (var i=0; i<array1.length; i++) {
+  console.log(array1[i] = "chirp")
+}
+  //array1 = [ 'chirp', 'chirp', 'chirp' ]
+  //sentence1 = 'More food please'
+var sentence1 = array1.join(" ");
+  //sentence1 = 'chirp chirp chirp'
 
 // TODO: part #2: use a while or do-while loop to replace the words in sentence 2
 // with 'chirp' (10 points)
 
 // your code goes here
+var array2 = sentence2.split(" ");
+var i = 0;
+
+while (i < array2.length) {
+  console.log(array2[i] = "chirp");
+  i++;
+}
+
+var sentence2 = array2.join(" ");
+
 
 // Leave these assertions as-is! If they pass, your code works.
 assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
@@ -106,6 +133,10 @@ var nextAnimal;
 
 // your code goes here
 
+//Math.random produces a number between 0 and 1. Math.floor rounds it down to the nearest whole number. Multiplying by 4 makes it a number between 0 and 4 which correspond to the array indexes.
+
+var nextAnimal = favoriteAnimals[Math.floor(Math.random() * 4)];
+
 assert(nextAnimal, 'assign something to nextAnimal');
 
 /* ===================================================================
@@ -128,12 +159,25 @@ var tooHungryDay;
  TODO: 20 points
  Cycle through the days in mealsPerDay. At each day, print out the average
  number of meals/day the lion got since the new caretaker started.
+
  tooHungryDay should receive the number of days before the lion started
  pondering protein supplements (the first day the average dips below 4
  meals)
 */
 
 // your code goes here
+//the for loop starts cycling through all of the days and printing the number of meals per day.
+for (var i=0; i<mealsPerDay.length; i++) {
+  console.log("Day " + (i+1) + ": The lion ate " + mealsPerDay[i] + " meals today.")
+
+//the if statement searches for when the lion had less than 4 meals in a day. when it finds a match, it assigns the value of that day (plus one since the array starts at zero but the first day should be 1 and not 0, therefore adding 1 to i) to the variable tooHungryDay. the break statement stops the rest of the code from running when a match is found (and the caretaker is eaten).
+  if (mealsPerDay[i] < 4) {
+  var tooHungryDay = (i+1)
+  console.log("Day " + (i+1) + ": The lion is too hungry.")
+  break;
+  }
+}
+//tooHungryDay = 3
 
 assert(tooHungryDay, 'remember to assign the answer to tooHungryDay');
 assert(tooHungryDay < 10, 'the lion is too hungry before the end of the array');
