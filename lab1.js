@@ -93,8 +93,8 @@ for (var i=0; i<array1.length; i++) {
 }
   //array1 = [ 'chirp', 'chirp', 'chirp' ]
   //sentence1 = 'More food please'
-var sentence1 = array1.join(" ");
-  //sentence1 = 'chirp chirp chirp'
+var sentence1 = array1.join(" ") + ".";
+  //sentence1 = 'chirp chirp chirp.'
 
 // TODO: part #2: use a while or do-while loop to replace the words in sentence 2
 // with 'chirp' (10 points)
@@ -108,7 +108,7 @@ while (i < array2.length) {
   i++;
 }
 
-var sentence2 = array2.join(" ");
+var sentence2 = array2.join(" ") + ".";
 
 
 // Leave these assertions as-is! If they pass, your code works.

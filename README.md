@@ -19,6 +19,6 @@ During class on Wednesday I worked with Jose a little bit on this assignment but
 
 I ran "npm nstall -g grunt -cli" and "npm install -g jshint" and both seem to run without errors, although it does spit some things out and I'm not exactly sure what I'm looking at.
 
-Right now my asserts pass *if I take out the period at the end of each sentence*. I read something on slack about doing a simple concatenation to get it right so I will try that, but wanted to submit what I have now.
+<!-- Right now my asserts pass *if I take out the period at the end of each sentence*. I read something on slack about doing a simple concatenation to get it right so I will try that, but wanted to submit what I have now. --> (Did this. It works properly now and changes were commited and reflect in the pull request.)
 
 The first section of the assignment took me a long time, probably about 1.5 hours between in class and at home work, but I flew through the rest of it in about an hour total.
