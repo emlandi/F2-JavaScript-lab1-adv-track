@@ -103,7 +103,6 @@ while (i < array2.length) {
 
 var sentence2 = array2.join(' ') + '.';
 
-
 // Leave these assertions as-is! If they pass, your code works.
 assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
 assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
@@ -163,7 +162,7 @@ var tooHungryDay;
 for (var i = 0; i < mealsPerDay.length; i++) {
   console.log('Day ' + (i + 1) + ': The lion ate ' + mealsPerDay[i] + ' meals today.');
 
-//the if statement searches for when the lion had less than 4 meals in a day. when it finds a match, it assigns the value of that day (plus one since the array starts at zero but the first day should be 1 and not 0, therefore adding 1 to i) to the variable tooHungryDay. the break statement stops the rest of the code from running when a match is found (and the caretaker is eaten).
+  //the if statement searches for when the lion had less than 4 meals in a day. when it finds a match, it assigns the value of that day (plus one since the array starts at zero but the first day should be 1 and not 0, therefore adding 1 to i) to the variable tooHungryDay. the break statement stops the rest of the code from running when a match is found (and the caretaker is eaten).
   if (mealsPerDay[i] < 4) {
     var tooHungryDay = (i + 1);
     console.log('Day ' + (i + 1) + ': The lion is too hungry.');
