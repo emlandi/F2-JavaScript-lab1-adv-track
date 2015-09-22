@@ -83,7 +83,7 @@ var sentence2 = 'Come over here so you can scratch my belly.';
 
 var array1 = sentence1.split(' ');
 
-for (var i=0; i<array1.length; i++) {
+for (var i = 0; i < array1.length; i++) {
   console.log(array1[i] = 'chirp');
 }
 
@@ -160,16 +160,17 @@ var tooHungryDay;
 
 // your code goes here
 //the for loop starts cycling through all of the days and printing the number of meals per day.
-for (var i=0; i<mealsPerDay.length; i++) {
-  console.log('Day ' + (i+1) + ': The lion ate ' + mealsPerDay[i] + ' meals today.');
+for (var i = 0; i < mealsPerDay.length; i++) {
+  console.log('Day ' + (i + 1) + ': The lion ate ' + mealsPerDay[i] + ' meals today.');
 
 //the if statement searches for when the lion had less than 4 meals in a day. when it finds a match, it assigns the value of that day (plus one since the array starts at zero but the first day should be 1 and not 0, therefore adding 1 to i) to the variable tooHungryDay. the break statement stops the rest of the code from running when a match is found (and the caretaker is eaten).
-if (mealsPerDay[i] < 4) {
-  var tooHungryDay = (i+1);
-  console.log('Day ' + (i+1) + ': The lion is too hungry.');
-  break;
+  if (mealsPerDay[i] < 4) {
+    var tooHungryDay = (i + 1);
+    console.log('Day ' + (i + 1) + ': The lion is too hungry.');
+    break;
   }
 }
+
 //tooHungryDay = 3
 
 assert(tooHungryDay, 'remember to assign the answer to tooHungryDay');
