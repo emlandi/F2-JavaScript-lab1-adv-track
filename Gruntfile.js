@@ -19,6 +19,7 @@ module.exports = function(grunt) {
       src: srcFiles,
       options: {
         preset: "airbnb",
+        disallowYodaConditions: null,
         requireMultipleVarDecl: null,
         validateQuoteMarks: true,
         disallowMultipleVarDecl: true
